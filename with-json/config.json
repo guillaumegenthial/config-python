@@ -1,0 +1,31 @@
+{
+    "type": "libnn.model.Model",
+    "params": {
+        "layers": [
+            {
+                "type": "libnn.layers.TimesTwoLayer",
+                "params": {
+                    "name": "times_two",
+                    "vocab": {
+                        "type": "libnn.vocab.Vocab",
+                        "params": {
+                            "words": ["foo", "bar"]
+                        }
+                    }
+                }
+            },
+            {
+                "type": "libnn.layers.PlusOneLayer",
+                "params": {
+                    "name": "plus_one",
+                    "vocab": {
+                        "type": "libnn.vocab.Vocab",
+                        "params": {
+                            "words": ["foo", "bar"]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

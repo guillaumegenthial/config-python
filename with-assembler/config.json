@@ -1,0 +1,13 @@
+{
+    "vocab": ["foo", "bar"],
+    "layers": [
+        {
+            "layer_type": "TimesTwoLayer",
+            "layer_name": "times_two"
+        },
+        {
+            "layer_type": "PlusOneLayer",
+            "layer_name": "plus_one"
+        }
+    ]
+}

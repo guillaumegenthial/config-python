@@ -1,0 +1,20 @@
+import libnn.layers
+import libnn.model
+import libnn.vocab
+
+# Vocab Singleton
+# =====================================================================
+Vocab.words = ["foo", "bar"]
+vocab/singleton.constructor = @Vocab
+
+# Layers Scopes
+# =====================================================================
+layer1/TimesTwoLayer.name = "times_two"
+layer1/TimesTwoLayer.vocab = @vocab/singleton()
+layer2/PlusOneLayer.name = "plus_one"
+layer2/PlusOneLayer.vocab = @vocab/singleton()
+
+
+# Model
+# =====================================================================
+Model.layers = [@layer1/TimesTwoLayer(), @layer2/PlusOneLayer()]
